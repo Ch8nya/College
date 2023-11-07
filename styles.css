@@ -1,0 +1,36 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'SF Pro', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f8f8f8; /* Background color for the entire page */
+}
+
+h1, h2 {
+    color: #0066CC;
+    font-weight: bold; /* Make headers bold */
+}
+
+p {
+    text-indent: 50px;
+}
+
+/* Style your images if needed */
+img {
+    max-width: 100%; /* Ensure images don't overflow their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional styling for specific elements if necessary */
+/* For example:
+   .important {
+       color: red;
+       font-weight: bold;
+   }
+*/
