@@ -2,25 +2,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms: A Deep Dive into Vertex Cover, 3SAT, and Max Clique</title>
+    <title>Design and Analysis of Algorithms: Vertex Cover, 3SAT, and Max Clique</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Design and Analysis of Algorithms: A Deep Dive into Vertex Cover, 3SAT, and Max Clique</h1>
-    <p>Welcome to this comprehensive exploration into the fascinating world of algorithm design and analysis. Here, we'll delve into three intriguing topics: Vertex Cover, 3SAT, and Max Clique. We'll explore these concepts in depth, elucidating their significance in computer science and their application in algorithm design and analysis.</p>
+    <p>Here we will expolore the above topics</p>
     
     <h2>Vertex Cover</h2>
-    <p>The Vertex Cover problem is a classical question within computer science, more specifically within computational complexity theory and optimization.</p>
-    <p>A vertex cover of an undirected graph is a subset of its vertices such that every edge of the graph is incident to at least one vertex in the set. The Vertex Cover problem is to find a vertex cover of minimum size in a given graph. This problem is NP-Complete, meaning it is as hard as the hardest problems in NP, a class of problems for which a solution can be verified quickly but no efficient solution is known.</p>
-    <img src="media-fbe-fbe5055e-bf92-43b9-9f07-8c00b496f3db-phpSovfYB.png" alt="Vertex Cover Image">
+    <p>A Vertex cover is a set of vertices (or nodes) in a graph such that every edge in the graph is incident to at least one vertex in the vertex cover.</p>
+    <p>More formally, given an undirected graph G = (V, E), a vertex cover is a subset of vertices C ⊆ V, such that for every edge (u, v) in E, at least one of u or v is in C. In other words, the vertices in the vertex cover "cover" all the edges in the graph.</p>
+    <p>The minimum vertex cover problem is an important problem in graph theory and computer science, where the goal is to find the smallest possible vertex cover for a given graph. This problem is known to be NP-hard, which means that it is computationally challenging to find the optimal solution in general, and it is often used as a basis for studying approximation algorithms and computational complexity.</p>
+    <p>Vertex covers have various applications in fields such as network design, optimization, and computer science algorithms. Finding a minimum vertex cover is a common problem in optimization and algorithm design, and many algorithms have been developed to approximate the minimum vertex cover efficiently.</p>
+    <img src="1.png" alt="Vertex Cover Image">
     
-
-    <h2>3SAT</h2>
-    <p>The Boolean satisfiability problem (SAT) is another fundamental problem in computer science. It pertains to determining if there exists an interpretation that satisfies a given Boolean formula, in other words, makes it evaluate to true.</p>
-    
-
     <h2>Max Clique</h2>
-    <p>In graph theory, a clique is a subset of vertices of an undirected graph such that every two distinct vertices in the clique are adjacent. In other words, a clique is a complete subgraph of the given graph.</p>
-    <img src="max_cliques.jpg.png" alt="Vertex Cover Image">
+    <p>A maximum clique in a graph is a subset of vertices where every pair of vertices is adjacent to each other, meaning that they are all connected by edges in the graph. In other words, it's a set of vertices that forms a complete subgraph within the original graph. The problem of finding the maximum clique in a graph is a well-known problem in graph theory and combinatorial optimization.</p>
+    
+    <h2>3-SAT</h2>
+    <p>3-SAT is a specific type of Boolean satisfiability problem, a well-known problem in computer science and mathematical logic. In 3-SAT, you're given a Boolean formula in conjunctive normal form (CNF) where each clause consists of exactly three literals (variables or their negations) connected by logical OR operators. The goal is to determine if there is an assignment of truth values (true or false) to the variables that makes the entire formula true.</p>
+    <p>For example, a 3-SAT problem might look like this:</p>
+    <p>(A OR B OR C) AND (NOT A OR NOT B OR C) AND (A OR B OR NOT C)</p>
+    <p>The question is whether there exists an assignment of true and false to variables A, B, and C that satisfies all these clauses simultaneously. 3-SAT is a well-studied problem in computational complexity theory, and its decision problem is NP-complete, meaning it's computationally challenging to find a satisfying assignment, and verifying one is relatively easy.</p>
+
+   
 </body>
 </html>
