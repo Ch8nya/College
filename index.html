@@ -17,10 +17,16 @@
     <img src="1.png" alt="Vertex Cover Image">
     
     <h2>Max Clique</h2>
-    <p>A maximum clique in a graph is a subset of vertices where every pair of vertices is adjacent to each other, meaning that they are all connected by edges in the graph. In other words, it's a set of vertices that forms a complete subgraph within the original graph. The problem of finding the maximum clique in a graph is a well-known problem in graph theory and combinatorial optimization.</p>
+    <p>In graph theory, a clique is a subset of vertices in an undirected graph such that every two distinct vertices in the clique are adjacent (connected by an edge) In tha above graph, set (x,y,z,w) all are adjacent to each other, hence it can be called as a clique of the graph.</p>
+    <p>Now there are two types of Max Clique, first in Maximum Click and Second one is Maximal Click</p>
+    <p>A maximal clique is a clique that cannot be extended by adding an adjacent vertex, meaning that if you add any more vertices to the subset, it will no longer be a clique.</p>
+    <p>In the above graph, set (x,y,z) can be called as a clique but not a max clique as when we add w, it is no longer maximal clique</p>
+    <p>Now Maximum Clique, on the other hand, a maximum clique is the largest clique in a graph. It is the clique with the maximum number of vertices among all cliques in the graph. The size of a clique is simply the number of vertices it contains.</p>
+    <p>The problem of finding the maximum clique in a graph is a well-known problem in graph theory and combinatorial optimization.</p>
     
     <h2>3-SAT</h2>
     <p>3-SAT is a specific type of Boolean satisfiability problem, a well-known problem in computer science and mathematical logic. In 3-SAT, you're given a Boolean formula in conjunctive normal form (CNF) where each clause consists of exactly three literals (variables or their negations) connected by logical OR operators. The goal is to determine if there is an assignment of truth values (true or false) to the variables that makes the entire formula true.</p>
+    <p>One clause is this (A OR B OR C), 3-SAT is a collection of 3 such clauses</p>
     <p>For example, a 3-SAT problem might look like this:</p>
     <p>(A OR B OR C) AND (NOT A OR NOT B OR C) AND (A OR B OR NOT C)</p>
     <p>The question is whether there exists an assignment of true and false to variables A, B, and C that satisfies all these clauses simultaneously. 3-SAT is a well-studied problem in computational complexity theory, and its decision problem is NP-complete, meaning it's computationally challenging to find a satisfying assignment, and verifying one is relatively easy.</p>
