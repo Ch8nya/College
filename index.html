@@ -65,10 +65,7 @@ A minimum vertex cover in a graph is a vertex cover with the smallest possible n
         <li><strong>Computer Science Algorithms:</strong> Vertex covers are used in algorithm design, particularly in the analysis of approximation algorithms and computational complexity. The minimum vertex cover problem is known to be NP-hard, making it a valuable benchmark for algorithmic research.</li>
     </ol>
 
-    <p><strong>Computational Complexity of Vertex Cover</strong></p>
-
-    <p>The minimum vertex cover problem is classified as NP-hard, indicating that finding the optimal solution is computationally challenging and may require exponential time in the worst case. This complexity arises from the need to explore all possible subsets of vertices to determine the smallest cover that satisfies the conditions.</p>
-
+  
    
    
     <p><strong>Algorithm to Find Vertex Cover of a Graph</strong><p>
@@ -79,7 +76,14 @@ a) Pick an arbitrary edge (u, v) from set E and add 'u' and 'v' to result<br>
 b) Remove all edges from E which are either incident on u or v.<br>
 4) Return result <p><br>
     <p><a href="https://www.geeksforgeeks.org/introduction-and-approximate-solution-for-vertex-cover-problem/" target="_blank">GeeksForGeeks.com- Algorithm and Implementation</a></p>
-    
+     <p><strong>Computational Complexity of Vertex Cover</strong></p>
+
+    <p> First we iterate thorugh vertices (V times).
+Then we use a inner loop to iterate through adjacency list of each vertex, considering each edge exactly once (E times in total).<br>The overall time complexity is O(V + E). The dominating factor is often the number of edges in the graph. If the graph is dense (many edges), the complexity is closer to O(E), and if the graph is sparse (few edges), it is closer to O(V).<br><br>
+        The minimum vertex cover problem is classified as NP-hard, indicating that finding the optimal solution is computationally challenging and may require exponential time in the worst case. This complexity arises from the need to explore all possible subsets of vertices to determine the smallest cover that satisfies the conditions.<br><br>
+
+The space complexity is O(V), where V is the number of vertices in the graph<br></p>
+
  <p><strong>Conclusion</strong></p>
 
     <p>In conclusion, vertex covering is a fundamental concept in graph theory with wide-ranging applications in network design, optimization, and algorithm design. The minimum vertex cover problem, being NP-hard, poses significant computational challenges, inspiring the development of approximation algorithms and heuristic methods. As technology advances, the study of vertex covers continues to contribute to the development of efficient algorithms with practical applications in diverse fields. The exploration of these concepts not only enhances our understanding of graph theory but also provides valuable tools for addressing real-world problems.</p>
@@ -120,8 +124,16 @@ B. Return if no more vertices can be added to the set.<br><br>
 <strong>Function to Check if Clique:</strong><br><br>
 
 Check if the current set of vertices forms a clique in the graph.<br>
-Return true if it is a clique, false if not a clique.<br></p> 
- <p><a href="https://www.geeksforgeeks.org/maximal-clique-problem-recursive-solution/" target="_blank">Max Clique Algorithm: GeeksforGeeks</a></p>
+Return true if it is a clique, false if not a clique.<br><p><a href="https://www.geeksforgeeks.org/maximal-clique-problem-recursive-solution/" target="_blank">Max Clique Algorithm: GeeksforGeeks</a></p></p> 
+<p> 
+<strong>Computational Complexity</strong><br><br>Checking if a set of vertices forms a clique involves checking all pairs of vertices in the set. This operation takes O(V^2) time in the worst case,<br>The recursive function explores different combinations of vertices, and in the worst case, it might explore all possible combinations.
+The worst-case time complexity of the backtracking algorithm is exponential, O(2^V), where V is the number of vertices.<br>
+Therefore, the overall time complexity is dominated by the backtracking function, making it O(2^V * V^2).<br><br>
+The recursion depth is at most the number of vertices in the graph. Therefore, the maximum space required for the recursion stack is O(V).
+The space required to store the current set of vertices during the recursion is O(V).<br>
+Combining these factors, the overall space complexity is O(V).
+</p>
+ 
 
     <h4>Maximum Cliques: </h4>
 
@@ -141,8 +153,14 @@ Return true if it is a clique, false if not a clique.<br></p>
 3. Check Connectivity:<br> Add the selected node to your candidate set if it's connected to all nodes already in the candidate set.<br>
 4. Update Candidate Set:<br> Remove the selected node from the set of unconsidered nodes.<br>
 5. Repeat:<br> Repeat steps 2-4 until there are no more unconsidered nodes.<br>
-6. Output:<br> The current candidate set is your maximum clique.</p></br>
-   <p><a href="https://www.tutorialspoint.com/design_and_analysis_of_algorithms/design_and_analysis_of_algorithms_max_cliques.htm#:~:text=Max%2DClique%20problem%20is%20a,This%20problem%20is%20NP%2DComplete.">Max Clique Algorithm: Tutorials Point</a></p>
+6. Output:<br> The current candidate set is your maximum clique.<br></p>
+ <p><a href="https://www.tutorialspoint.com/design_and_analysis_of_algorithms/design_and_analysis_of_algorithms_max_cliques.htm#:~:text=Max%2DClique%20problem%20is%20a,This%20problem%20is%20NP%2DComplete.">Max Clique Algorithm: Tutorials Point</a></p>
+
+<p><strong>Computational Complexity</strong><br><br>The time complexity of this algorithm is O(V^2), where V is the number of vertices in the graph. This is because, in the worst case, for each node, you may need to check its connectivity with all other nodes already in the candidate set, and this operation takes O(V) time.
+<br><br>
+Space Complexity:
+The space complexity is O(V), where V is the number of vertices in the graph.</p>
+  
   
 <br>
 <br>
@@ -157,10 +175,7 @@ Return true if it is a clique, false if not a clique.<br></p>
 
     <p>To illustrate, a single clause in 3-SAT takes the form (A OR B OR C), and a complete 3-SAT problem consists of a collection of such clauses. The overarching objective is to ascertain whether a combination of true and false assignments to variables exists, rendering the entire formula true.</p>
 
-    <h4>Computational Complexity and NP-Completeness</h4>
-
-    <p>3-SAT stands as a well-studied problem in computational complexity theory. Its decision problem is classified as NP-complete, a category of problems notorious for their computational challenges. The term "NP-complete" indicates that while verifying a potential solution is relatively straightforward, finding a satisfying assignment is computationally hard.</p>
-
+   
     <h4>Satisfiability</h4>
 
     <p>The variables A, B, and C must be strategically assigned truth values to meet the criteria of each clause. The challenge lies not only in determining whether a satisfying assignment exists but also in efficiently finding one within the vast solution space.</p>
@@ -190,6 +205,12 @@ Return true if it is a clique, false if not a clique.<br></p>
 
 5. Termination:
     a. Stop when a satisfiable assignment is found or all possible assignments <br>have been explored.</pre>
+     <h4>Computational Complexity and NP-Completeness</h4>
+
+    <p><br>Time Complexity:
+Exponential, O(2^n), where n is the number of variables in the 3-SAT formula.<br><br> Space Complexity:
+Linear, O(n), where n is the number of variables in the 3-SAT formula.<br><br><br>3-SAT stands as a well-studied problem in computational complexity theory. Its decision problem is classified as NP-complete, a category of problems notorious for their computational challenges. The term "NP-complete" indicates that while verifying a potential solution is relatively straightforward, finding a satisfying assignment is computationally hard.</p>
+
     </div>
 </body>
 </html>
