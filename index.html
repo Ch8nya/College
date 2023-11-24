@@ -184,27 +184,27 @@ The space complexity is O(V), where V is the number of vertices in the graph.</p
     <br>
     <h4>Algorithm to Find satisfying assignment for a 3-SAT problem </h4>
 <p> <pre>1. Initialize Assignment:
-    a. Start with an empty assignment of truth values to variables.
+    a. Start with an empty assignment <br> of truth values to variables.
 
 2. Check Satisfiability:
     a. For each clause in the 3-SAT formula:
-        i. If at least one literal in the clause is satisfied by the current<br> assignment, move on to the next clause.
-        ii. If no literal in the clause is satisfied, backtrack to the previous<br> variable assignment.
+        i. If at least one literal in the <br> clause is satisfied by the current<br> assignment, move on to the next clause.
+        ii. If no literal in the clause is <br> satisfied, backtrack to the previous<br> variable assignment.
 
 3. Explore Assignments:
     a. For the current variable in the assignment:
         i. Try assigning it the value 'true'.
-        ii. Recursively check satisfiability with the updated assignment.
-        iii. If the formula is satisfiable, return true.
-        iv. If not, backtrack to the previous assignment and try assigning<br> the variable 'false'.
+        ii. Recursively check satisfiability<br> with the updated assignment.
+        iii. If the formula is satisfiable,<br> return true.
+        iv. If not, backtrack to the previous <br>assignment and try assigning<br> the variable 'false'.
 
 4. Base Case:
-    a. If all variables have been assigned a truth value, check if the entire<br> 3-SAT formula is satisfied.
+    a. If all variables have been assigned<br> a truth value, check if the entire<br> 3-SAT formula is satisfied.
     b. If satisfied, return true.
-    c. If not, backtrack to the previous assignment.
+    c. If not, backtrack to the previous<br> assignment.
 
 5. Termination:
-    a. Stop when a satisfiable assignment is found or all possible assignments <br>have been explored.</pre>
+    a. Stop when a satisfiable assignment is <br>found or all possible assignments <br>have been explored.</pre>
      <h4>Computational Complexity and NP-Completeness</h4>
 
     <p><br>Time Complexity:
