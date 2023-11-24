@@ -173,9 +173,7 @@ The space complexity is O(V), where V is the number of vertices in the graph.</p
 
     <h4>Anatomy of a 3-SAT Problem</h4>
 
-    <p>To illustrate, a single clause in 3-SAT takes the form (A OR B OR C), and a complete 3-SAT problem consists of a collection of such clauses. The overarching objective is to ascertain whether a combination of true and false assignments to variables exists, rendering the entire formula true.</p>
-
-   
+    <p>To illustrate, a single clause in 3-SAT takes the form (A OR B OR C), and a complete 3-SAT problem consists of a collection of such clauses, and example would be: (A OR B OR C) AND (A OR B OR C) AND (A OR B OR C). The overarching objective is to ascertain whether a combination of true and false assignments to variables exists, rendering the entire formula true.</p>   
     <h4>Satisfiability</h4>
 
     <p>The variables A, B, and C must be strategically assigned truth values to meet the criteria of each clause. The challenge lies not only in determining whether a satisfying assignment exists but also in efficiently finding one within the vast solution space.</p>
@@ -192,7 +190,7 @@ The space complexity is O(V), where V is the number of vertices in the graph.</p
         ii. If no literal in the clause is <br> satisfied, backtrack to the previous<br> variable assignment.
 
 3. Explore Assignments:
-    a. For the current variable in the assignment:
+    a. For the current variable in the <br> assignment:
         i. Try assigning it the value 'true'.
         ii. Recursively check satisfiability<br> with the updated assignment.
         iii. If the formula is satisfiable,<br> return true.
